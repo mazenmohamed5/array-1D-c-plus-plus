@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+void main() {
+	
+	const int size=5;
+	int x[size];
+	int i, y;
+	for ( int i = 0; i <size; i++)
+	{
+		cin >> x[i];
+	}
+	for (int i = 0; i <size; i++)
+	{
+		for (int y= i+1; y<size; y++)
+		{
+			int temp;
+			if (x[i] > x[y])
+			{
+				
+				temp = x[i];
+				x[i] = x[y];
+				x[y] = temp;
+
+			}
+		}
+	}
+	for (int i = 0; i <size; i++)
+	{
+		cout << x[i];
+	}
+}
